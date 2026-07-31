@@ -15,3 +15,25 @@ window.addEventListener("load", () => {
         // ko highlight karne wala code add karenge.
     });
 });
+const states = [
+  "Madhya_Pradesh",
+  "Chhattisgarh",
+  "Maharashtra",
+  "Uttar_Pradesh",
+  "Odisha",
+  "Jharkhand"
+];
+
+let delay = 0;
+
+states.forEach((state) => {
+  setTimeout(() => {
+    const element = document.getElementById(state);
+
+    if (element) {
+      element.classList.add("state-highlight");
+    }
+  }, delay);
+
+  delay += 700;
+});
